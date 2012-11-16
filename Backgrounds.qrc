@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pics/backgrounds/bgr20.jpg</file>
+        <file>pics/backgrounds/bgr00.jpg</file>
+        <file>pics/backgrounds/bgr01.jpg</file>
+        <file>pics/backgrounds/bgr02.jpg</file>
+        <file>pics/backgrounds/bgr03.jpg</file>
+        <file>pics/backgrounds/bgr04.jpg</file>
+        <file>pics/backgrounds/bgr05.jpg</file>
+        <file>pics/backgrounds/bgr06.jpg</file>
+        <file>pics/backgrounds/bgr07.jpg</file>
+        <file>pics/backgrounds/bgr08.jpg</file>
+        <file>pics/backgrounds/bgr09.jpg</file>
+        <file>pics/backgrounds/bgr10.jpg</file>
+        <file>pics/backgrounds/bgr11.jpg</file>
+        <file>pics/backgrounds/bgr12.jpg</file>
+        <file>pics/backgrounds/bgr13.jpg</file>
+        <file>pics/backgrounds/bgr14.jpg</file>
+        <file>pics/backgrounds/bgr15.jpg</file>
+        <file>pics/backgrounds/bgr16.jpg</file>
+        <file>pics/backgrounds/bgr17.jpg</file>
+        <file>pics/backgrounds/bgr18.jpg</file>
+        <file>pics/backgrounds/bgr19.jpg</file>
+    </qresource>
+</RCC>

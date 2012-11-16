@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="242.71429"
+   height="242.57146"
+   id="svg3755"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="cloudFront.svg">
+  <defs
+     id="defs3757" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="161.26398"
+     inkscape:cy="88.475338"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="1144"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="121.07143,112.5"
+       id="guide4282" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="167.85714,121.42857"
+       id="guide4284" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3760">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-167.50001,-255.21933)">
+    <path
+       style="fill:#ffff00;fill-opacity:0.68181817000000000;stroke:#ffff00;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 121.0625 2.5625 L 92.75 92.8125 L 2.5 121.15625 L 92.75 149.46875 L 121.0625 239.71875 L 149.40625 149.46875 L 239.65625 121.15625 L 149.40625 92.8125 L 121.0625 2.5625 z M 121.0625 36.84375 L 141.21875 101 L 205.34375 121.15625 L 141.21875 141.28125 L 121.0625 205.4375 L 100.9375 141.28125 L 36.78125 121.15625 L 100.9375 101 L 121.0625 36.84375 z "
+       transform="translate(167.50001,255.21933)"
+       id="path4298" />
+  </g>
+</svg>

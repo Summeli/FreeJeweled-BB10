@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pics/gems/yellowGem.svg</file>
+        <file>pics/gems/blueGem.svg</file>
+        <file>pics/gems/greenGem.svg</file>
+        <file>pics/gems/hyperCube.svg</file>
+        <file>pics/gems/orangeGem.svg</file>
+        <file>pics/gems/purpleGem.svg</file>
+        <file>pics/gems/redGem.svg</file>
+        <file>pics/gems/whiteGem.svg</file>
+        <file alias="Shine.qml">qml/Shine.qml</file>
+        <file alias="AboutDialog.qml">qml/AboutDialog.qml</file>
+        <file alias="BaseButton.qml">qml/BaseButton.qml</file>
+        <file alias="Block.qml">qml/Block.qml</file>
+		<file alias="Cloud.qml">qml/Cloud.qml</file>
+		<file alias="EndOfGameDialog.qml">qml/EndOfGameDialog.qml</file>
+    	<file alias="InGameButton.qml">qml/InGameButton.qml</file>
+  		<file alias="LoadDialogButton.qml">qml/LoadDialogButton.qml</file>
+  		<file alias="LoadSavedGameDialog.qml">qml/LoadSavedGameDialog.qml</file>
+		<file alias="MainMenuButton.qml">qml/MainMenuButton.qml</file>
+ 		<file alias="MsgText.qml">qml/MsgText.qml</file>
+        <file alias="ProgressBar.qml">qml/ProgressBar.qml</file>
+		<file alias="ScoreText.qml">qml/ScoreText.qml</file>
+        <file alias="SettingsDialog.qml">qml/SettingsDialog.qml</file>
+        <file>MainForm.qml</file>
+        <file>fonts/forgotte.ttf</file>
+        <file>fonts/mailrays.ttf</file>
+        <file>fonts/pirulen.ttf</file>
+        <file>pics/selectionBorder.png</file>
+        <file>pics/stars/yellowStar.new.png</file>
+        <file>pics/stars/blueStar.new.png</file>
+        <file>pics/stars/greenStar.new.png</file>
+        <file>pics/stars/orangeStar.new.png</file>
+        <file>pics/stars/purpleStar.new.png</file>
+        <file>pics/stars/redStar.new.png</file>
+        <file>pics/stars/whiteStar.new.png</file>
+        <file>pics/appIcon.small.png</file>
+        <file>pics/hintArrow.svg</file>
+        <file>pics/effects/cloudBack.svg</file>
+        <file>pics/effects/cloudFront.svg</file>
+        <file>pics/effects/shine.svg</file>
+        <file>pics/field.svg</file>
+        <file>pics/titleText.svg</file>
+    </qresource>
+</RCC>

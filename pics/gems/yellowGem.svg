@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg749"
+   sodipodi:version="0.32"
+   width="160mm"
+   height="160mm"
+   sodipodi:docbase="/home/seb/Sources/Gweled/0.2/pixmaps/"
+   sodipodi:docname="/home/seb/Sources/Gweled/0.2/pixmaps/gem06.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs751">
+    <linearGradient
+       id="linearGradient732">
+      <stop
+         style="stop-color:#7f7a00;stop-opacity:1;"
+         offset="0.000000"
+         id="stop733" />
+      <stop
+         style="stop-color:#bdbf00;stop-opacity:1;"
+         offset="1.000000"
+         id="stop734" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient732"
+       id="linearGradient735"
+       x1="363.256287"
+       y1="537.515869"
+       x2="313.139618"
+       y2="588.024109"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       gradientTransform="scale(0.999130,1.000871)" />
+  </defs>
+  <sodipodi:namedview
+     id="base" />
+  <path
+     style="fill:url(#linearGradient735);fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:30;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 108.723 523.201 L 356.53 771.302 L 605.602 522.538 L 356.78 273.557 L 108.723 523.201 z "
+     id="path563"
+     sodipodi:nodetypes="ccccc"
+     transform="translate(-75.16875,-235.5287)" />
+  <rect
+     style="font-size:12;fill:#919103;fill-rule:evenodd;stroke:none;stroke-width:6.4263;fill-opacity:1;"
+     id="rect754"
+     width="83.103954"
+     height="83.103954"
+     x="360.522197"
+     y="-37.852697"
+     transform="matrix(0.707107,0.707107,-0.707107,0.707107,0.000000,0.000000)" />
+  <path
+     style="fill:#d7e011;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;"
+     d="M 412.227 409.81 L 244.501 578.716 L 245.682 412.172 L 412.227 409.81 z "
+     id="path756"
+     sodipodi:nodetypes="cccc"
+     transform="translate(-75.16875,-235.5287)" />
+  <path
+     style="fill:#f3f791;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:0.768116;"
+     d="M 356.866 294.917 L 357.796 464.599 L 299.265 523.52 L 129.928 523.201 L 356.866 294.917 z "
+     id="path755"
+     sodipodi:nodetypes="ccccc"
+     transform="translate(-75.16875,-235.5287)" />
+  <path
+     style="fill:#bec006;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:0.743961;"
+     d="M 357.016 581.129 L 274.03 664.941 L 356.711 749.985 L 441.089 665.47 L 357.016 581.129 z "
+     id="path757"
+     sodipodi:nodetypes="ccccc"
+     transform="translate(-75.16875,-235.5287)" />
+  <path
+     style="fill:#ebf007;fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:0.772947;"
+     d="M 356.961 581.085 L 500.257 438.415 L 584.322 522.432 L 441.039 665.608 C 441.039 665.608 357.007 581.085 356.961 581.085 z "
+     id="path758"
+     sodipodi:nodetypes="ccccc"
+     transform="translate(-75.16875,-235.5287)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#bec006;stroke-opacity:1;stroke-width:2.5;stroke-linejoin:miter;stroke-linecap:round;fill-opacity:1;stroke-dasharray:none;"
+     d="M 582.578 522.48 L 416.898 522.373 "
+     id="path759"
+     sodipodi:nodetypes="cc"
+     transform="translate(-75.16875,-235.5287)" />
+</svg>
