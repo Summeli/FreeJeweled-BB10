@@ -2,11 +2,11 @@ import QtQuick 1.0
 
 Rectangle {
     id: dlgLoadSave
-    anchors { fill: parent; margins: 10*gameBoard.cellSize/40 }
+    anchors { fill: parent; margins: 21 }
     color: "black"
     visible: opacity > 0
     opacity: 0.0
-    radius: 10*gameBoard.cellSize/40
+    radius: 21
 
     signal opened
     signal closed
@@ -34,8 +34,8 @@ Rectangle {
         id: dlgTitle
         text: "<p align=\"center\">You have saved game.<br>Want to load?<\p>"
         color: "white"
-        font.pointSize: 18*gameBoard.cellSize/40
-        anchors { top: dlgLoadSave.top; horizontalCenter: dlgLoadSave.horizontalCenter; margins: 30*gameBoard.cellSize/40 }
+        font.pointSize: 38
+        anchors { top: dlgLoadSave.top; horizontalCenter: dlgLoadSave.horizontalCenter; margins: 63}
     }
 
     LoadDialogButton {
