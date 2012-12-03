@@ -9,7 +9,7 @@ Item {
     property alias color: gradient1.color
     property alias secondColor: gradient2.color
 
-    width: parent.width; height: 42 //20*gameBoard.cellSize/40
+    width: parent.width; height: 20*gameBoard.cellSize/40
     clip: true
 
     Rectangle {

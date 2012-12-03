@@ -5,9 +5,8 @@ import QtQuick 1.0
 Rectangle {
     id: button
     color: "white"
-    //these dont seem to work well...
-    width: buttonLabel.width + 42 //20*gameBoard.cellSize/40
-    height: buttonLabel.height + 10 //5*gameBoard.cellSize/40
+    width: buttonLabel.width + 20*gameBoard.cellSize/40
+    height: buttonLabel.height + 5*gameBoard.cellSize/40
     radius: button.height/2.1
     smooth: true
 

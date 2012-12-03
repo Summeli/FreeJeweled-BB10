@@ -4,9 +4,9 @@ import com.mycompany.gemcell 1.0
 Rectangle {
     id: screen
     color: "black"
-    width: 680 //8*gameBoard.cellSize
-    height: 1020 //12*gameBoard.cellSize
-    property double g_scaleFactor: 2//gameBoard.cellSize/40
+    width: 8*gameBoard.cellSize
+    height: 12*gameBoard.cellSize
+    property double g_scaleFactor: gameBoard.cellSize/40
     state: "stateMainMenu"
     z: -10
 
@@ -93,8 +93,8 @@ Rectangle {
 
     GameBoard {
         id: gameBoard
-        width: 8*85//gameBoard.cellSize
-        height: 8*85//*gameBoard.cellSize
+        width: 8*gameBoard.cellSize
+        height: 8*gameBoard.cellSize
         anchors.top: topGameBoardBorder.bottom
         visible: opacity > 0
         opacity: 0
@@ -117,8 +117,8 @@ Rectangle {
 
         Item {
             id: selectionRect
-            width: 85//gameBoard.cellSize
-            height: 85// gameBoard.cellSize
+            width: gameBoard.cellSize
+            height: gameBoard.cellSize
             visible: gameBoard.gemSelected
             x: gameBoard.selGemColumn*width
             y: gameBoard.selGemRow*width
@@ -136,8 +136,8 @@ Rectangle {
             source: ":/pics/hintArrow.svg"
             x: gameBoard.hintX
             y: gameBoard.hintY - height/4
-            width: 85//gameBoard.cellSize
-            height: 42 //gameBoard.cellSize/2
+            width: gameBoard.cellSize
+            height: gameBoard.cellSize/2
             sourceSize.width: width
             sourceSize.height: height
 
@@ -306,8 +306,7 @@ Rectangle {
         width: parent.width
         height: parent.height - scoreBox.height - topGameBoardBorder.height - gameBoard.height
             - bottomGameBoardBorder.height - pbLevelProgress.height
-       // anchors.top: pbLevelProgress.bottom
-        anchors.top: screen.bottom
+        anchors.top: pbLevelProgress.bottom
         visible: opacity > 0
 
         InGameButton {
@@ -316,6 +315,7 @@ Rectangle {
             anchors.left: parent.left
             color: "red"
             caption: "Reset"
+
             onClicked: gameBoard.resetBoard()
         }
 /*
@@ -335,6 +335,7 @@ Rectangle {
             anchors.left: btnReset.right
             caption: "LevelUp"
             color: "blue"
+
             onClicked: {
                 gameBoard.score = gameBoard.levelCap(gameBoard.level);
                 gameBoard.removeAll();
@@ -354,22 +355,21 @@ Rectangle {
 
         InGameButton {
             id: btnShowHint
-            anchors.top: parent.top
-            //anchors.bottom: parent.bottom
-            //anchors.left: parent.left
-            anchors.left: btnLevelUp.right
+            anchors.bottom: parent.bottom
+            anchors.left: btnLoadTest.right
             caption: "Hint"
             color: "green"
+
             onClicked: gameBoard.showHint()
         }
 
         InGameButton {
             id: btnMenu
-            //anchors.bottom: parent.bottom
-            anchors.top: parent.top
+            anchors.bottom: parent.bottom
             anchors.left: btnShowHint.right
             caption: "Menu"
             color: "red"
+
             onClicked: screen.state = "stateMainMenu"
         }
     }
@@ -459,12 +459,12 @@ Rectangle {
             /* Main menu elements anchors */
             AnchorChanges { target: gameTitle; anchors.top: screen.top }
             AnchorChanges { target: btnClassic; anchors.horizontalCenter: screen.horizontalCenter }
-            //AnchorChanges { target: btnEndless; anchors.horizontalCenter: screen.horizontalCenter }
-            //AnchorChanges { target: btnAction; anchors.horizontalCenter: screen.horizontalCenter }
+            AnchorChanges { target: btnEndless; anchors.horizontalCenter: screen.horizontalCenter }
+            AnchorChanges { target: btnAction; anchors.horizontalCenter: screen.horizontalCenter }
             AnchorChanges { target: btnAbout; anchors.horizontalCenter: screen.horizontalCenter }
 
             /* Game elements anchors */
-            //AnchorChanges { target: toolBar; anchors.top: screen.bottom }
+            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
             AnchorChanges { target: gameBoard; anchors.left: screen.right }
         },
         State {
@@ -475,7 +475,7 @@ Rectangle {
             AnchorChanges { target: btnAbout; anchors.left: screen.right }
 
             /* Game elements anchors */
-           // AnchorChanges { target: toolBar; anchors.top: pbLevelProgress.bottom }
+            AnchorChanges { target: toolBar; anchors.top: pbLevelProgress.bottom }
             AnchorChanges { target: gameBoard; anchors.left: screen.left }
         },
         State {
@@ -483,12 +483,12 @@ Rectangle {
             /* Main menu elements anchors */
             AnchorChanges { target: gameTitle; anchors.bottom: screen.top }
             AnchorChanges { target: btnClassic; anchors.right: screen.left }
-            //AnchorChanges { target: btnEndless; anchors.left: screen.right }
-            //AnchorChanges { target: btnAction; anchors.right: screen.left }
+            AnchorChanges { target: btnEndless; anchors.left: screen.right }
+            AnchorChanges { target: btnAction; anchors.right: screen.left }
             AnchorChanges { target: btnAbout; anchors.left: screen.right }
 
             /* Game elements anchors */
-           // AnchorChanges { target: toolBar; anchors.top: screen.bottom }
+            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
 
             /* Showing Settings and hiding About dialog */
             PropertyChanges { target: dlgSettings; opacity: 1.0 }
@@ -504,7 +504,7 @@ Rectangle {
             PropertyChanges { target: txtAppVersion; opacity: 1.0 }
 
             /* Game elements anchors */
-            //AnchorChanges { target: toolBar; anchors.top: screen.bottom }
+            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
         }
     ]
 

@@ -4,7 +4,7 @@ Text {
     id: msgText
     color: "gold"
     font.family: gameFont.name
-    font.pointSize: 80//38*gameBoard.cellSize/40
+    font.pointSize: 38*gameBoard.cellSize/40
     font.bold: true
     anchors.centerIn: gameBoard
     style: Text.Outline
