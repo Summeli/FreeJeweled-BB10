@@ -37,7 +37,7 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: 5;
         font.bold: true;
-        font.pointSize: 20*gameBoard.cellSize/40
+        font.pointSize: 42//20*gameBoard.cellSize/40
         font.family: buttonFont.name
         color: "white"
         text: "Your result"
@@ -48,8 +48,10 @@ Rectangle {
         color: "white"
         text: "Level"
         anchors.top: titleText.bottom
-        anchors.margins: 20*gameBoard.cellSize/40
-        font.pointSize: 16*gameBoard.cellSize/40
+       // anchors.margins: 20*gameBoard.cellSize/40
+        anchors.margins: 42
+     //   font.pointSize: 16*gameBoard.cellSize/40
+        font.pointSize: 34
         font.family: buttonFont.name
     }
 
@@ -58,8 +60,10 @@ Rectangle {
         color: "white"
         text: "Score"
         anchors.top: lblLevel.bottom
-        anchors.margins: 20*gameBoard.cellSize/40
-        font.pointSize: 16*gameBoard.cellSize/40
+       // anchors.margins: 20*gameBoard.cellSize/40
+       // font.pointSize: 16*gameBoard.cellSize/40
+        anchors.margins: 42
+        font.pointSize: 34
         font.family: buttonFont.name
     }
 
@@ -68,8 +72,10 @@ Rectangle {
         color: "white"
         text: "High score"
         anchors.top: lblScore.bottom
-        anchors.margins: 20*gameBoard.cellSize/40
-        font.pointSize: 16*gameBoard.cellSize/40
+       // anchors.margins: 20*gameBoard.cellSize/40
+       // font.pointSize: 16*gameBoard.cellSize/40
+        anchors.margins: 42
+        font.pointSize: 34
         font.family: buttonFont.name
     }
 
@@ -77,24 +83,24 @@ Rectangle {
         id: valueLevel
         color: "white"
         text: gameBoard.level
-        anchors { top: titleText.bottom; margins: 20*gameBoard.cellSize/40 }
-        font { pointSize: 16*gameBoard.cellSize/40; family: buttonFont.name }
+        anchors { top: titleText.bottom; margins: 42 }
+        font { pointSize: 43; family: buttonFont.name }
     }
 
     Text {
         id: valueHighScore
         color: "white"
-        text: gameBoard.settings("classic/highScore")
-        anchors { top: valueScore.bottom; margins: 20*gameBoard.cellSize/40 }
-        font { pointSize: 16*gameBoard.cellSize/40; family: buttonFont.name }
+        text: "highScore"//gameBoard.settings("classic/highScore")
+        anchors { top: valueScore.bottom; margins: 42 }
+        font { pointSize: 34; family: buttonFont.name }
     }
 
     Text {
         id: valueScore
         color: "white"
         text: gameBoard.score
-        anchors { top: valueLevel.bottom; margins: 20*gameBoard.cellSize/40 }
-        font { pointSize: 16*gameBoard.cellSize/40; family: buttonFont.name }
+        anchors { top: valueLevel.bottom; margins: 42 }
+        font { pointSize: 34; family: buttonFont.name }
     }
 
     states: [

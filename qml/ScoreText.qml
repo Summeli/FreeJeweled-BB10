@@ -19,7 +19,7 @@ Item {
         anchors.centerIn: scoreItem
         text: scoreItem.scoreValue
         font.bold: true
-        font.pointSize: 16*g_scaleFactor
+        font.pointSize: 16//16*g_scaleFactor
 
         color: {
             if (scoreItem.type == 1)

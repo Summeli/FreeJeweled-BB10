@@ -47,6 +47,7 @@ Rectangle {
         id: dlgAbout
         visible: opacity > 0
         opacity: 0.0
+        anchors.fill: parent
         MouseArea {
             anchors.fill: parent
             onClicked: screen.state = "stateMainMenu"
@@ -65,8 +66,8 @@ Rectangle {
         Behavior on opacity {
             NumberAnimation { duration: 500 }
         }
-        onSizeDecrease: gameBoard.cellSize -= 10;
-        onSizeIncrease: gameBoard.cellSize += 10;
+        //onSizeDecrease: gameBoard.cellSize -= 10;
+        //onSizeIncrease: gameBoard.cellSize += 10;
         onBackPressed: screen.state = "stateMainMenu"
         onAboutPressed: screen.state = "stateAbout"
     }
@@ -174,7 +175,7 @@ Rectangle {
 
         onNoMoreMoves: {
             msgText.text = "NO MORE MOVES";
-            msgText.font.pointSize = 30*g_scaleFactor;
+            msgText.font.pointSize = 15;
             msgText.show();
             dlgEndGame.show();
         }
@@ -185,7 +186,7 @@ Rectangle {
         ScriptAction {
             script: {
                 msgText.text = "LEVEL UP!";
-                msgText.font.pointSize = 38*g_scaleFactor;
+                msgText.font.pointSize = 18;
                 msgText.show();
                 gameBoard.dropGemsDown();
             }
@@ -194,7 +195,7 @@ Rectangle {
         ScriptAction {
             script: {
                 msgText.text = "LEVEL " + gameBoard.level;
-                msgText.font.pointSize = 38*g_scaleFactor;
+                msgText.font.pointSize = 18;
                 msgText.show();
                 pbLevelProgress.minimum = gameBoard.levelCap(gameBoard.level - 1);
                 pbLevelProgress.maximum = gameBoard.levelCap(gameBoard.level);
@@ -249,7 +250,7 @@ Rectangle {
             id: txtScore
             color: "white"
             font.family: gameFont.name
-            font.pointSize: 16*g_scaleFactor
+            font.pointSize: 16
             font.bold: true
             text: gameBoard.score
             anchors.bottom: parent.bottom
@@ -261,12 +262,12 @@ Rectangle {
             id: txtLevel
             color: "white"
             font.family: gameFont.name
-            font.pointSize: 16*g_scaleFactor
+            font.pointSize: 16
             font.bold: true
             text: "Level " + gameBoard.level + " "
             anchors.bottom: parent.bottom
-            anchors.rightMargin: 10*g_scaleFactor
-            anchors.bottomMargin: 5*g_scaleFactor
+            anchors.rightMargin: 10
+            anchors.bottomMargin: 5
         }
 
         states: [
@@ -306,7 +307,8 @@ Rectangle {
         width: parent.width
         height: parent.height - scoreBox.height - topGameBoardBorder.height - gameBoard.height
             - bottomGameBoardBorder.height - pbLevelProgress.height
-        anchors.top: pbLevelProgress.bottom
+       // anchors.top: pbLevelProgress.bottom
+        anchors.top: screen.bottom
         visible: opacity > 0
 
         InGameButton {
@@ -355,8 +357,10 @@ Rectangle {
 
         InGameButton {
             id: btnShowHint
-            anchors.bottom: parent.bottom
-            anchors.left: btnLoadTest.right
+            anchors.top: parent.top
+            //anchors.bottom: parent.bottom
+            //anchors.left: parent.left
+            anchors.left: btnLevelUp.right
             caption: "Hint"
             color: "green"
 
@@ -365,11 +369,11 @@ Rectangle {
 
         InGameButton {
             id: btnMenu
-            anchors.bottom: parent.bottom
+            //anchors.bottom: parent.bottom
+            anchors.top: parent.top
             anchors.left: btnShowHint.right
             caption: "Menu"
             color: "red"
-
             onClicked: screen.state = "stateMainMenu"
         }
     }
@@ -377,7 +381,7 @@ Rectangle {
     Text {
         id: txtAppVersion
         text: g_appVersion
-        font.pointSize: 14*g_scaleFactor
+        font.pointSize: 12
         font.family: buttonFont.name
         color: "lightgray"
         visible: opacity > 0
@@ -459,13 +463,12 @@ Rectangle {
             /* Main menu elements anchors */
             AnchorChanges { target: gameTitle; anchors.top: screen.top }
             AnchorChanges { target: btnClassic; anchors.horizontalCenter: screen.horizontalCenter }
-            AnchorChanges { target: btnEndless; anchors.horizontalCenter: screen.horizontalCenter }
-            AnchorChanges { target: btnAction; anchors.horizontalCenter: screen.horizontalCenter }
             AnchorChanges { target: btnAbout; anchors.horizontalCenter: screen.horizontalCenter }
 
             /* Game elements anchors */
             AnchorChanges { target: toolBar; anchors.top: screen.bottom }
             AnchorChanges { target: gameBoard; anchors.left: screen.right }
+            PropertyChanges { target: toolBar; visible: false }
         },
         State {
             name: "stateGame"
@@ -475,36 +478,41 @@ Rectangle {
             AnchorChanges { target: btnAbout; anchors.left: screen.right }
 
             /* Game elements anchors */
-            AnchorChanges { target: toolBar; anchors.top: pbLevelProgress.bottom }
+            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
             AnchorChanges { target: gameBoard; anchors.left: screen.left }
+            PropertyChanges { target: toolBar; visible: true }
         },
         State {
             name: "stateSettings"
             /* Main menu elements anchors */
             AnchorChanges { target: gameTitle; anchors.bottom: screen.top }
             AnchorChanges { target: btnClassic; anchors.right: screen.left }
-            AnchorChanges { target: btnEndless; anchors.left: screen.right }
-            AnchorChanges { target: btnAction; anchors.right: screen.left }
+            //AnchorChanges { target: btnEndless; anchors.left: screen.right }
+            //AnchorChanges { target: btnAction; anchors.right: screen.left }
             AnchorChanges { target: btnAbout; anchors.left: screen.right }
 
             /* Game elements anchors */
-            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
+           AnchorChanges { target: toolBar; anchors.top: screen.bottom }
 
             /* Showing Settings and hiding About dialog */
             PropertyChanges { target: dlgSettings; opacity: 1.0 }
             PropertyChanges { target: dlgAbout; opacity: 0.0 }
+            PropertyChanges { target: toolBar; visible: false }
         },
         State {
             name: "stateAbout"
             /* Showing About and hiding Settings dialogs */
-            PropertyChanges { target: dlgSettings; opacity: 0.0 }
+            PropertyChanges { target: dlgSettings; visible: false }
             PropertyChanges { target: dlgAbout; opacity: 1.0 }
-
+            
+            AnchorChanges { target: btnClassic; anchors.right: screen.left }
+            AnchorChanges { target: btnAbout; anchors.left: screen.right }
             /* Showing info about app version */
             PropertyChanges { target: txtAppVersion; opacity: 1.0 }
 
+            PropertyChanges { target: toolBar; visible: false }
             /* Game elements anchors */
-            AnchorChanges { target: toolBar; anchors.top: screen.bottom }
+           // AnchorChanges { target: toolBar; anchors.top: screen.bottom - 500 }
         }
     ]
 

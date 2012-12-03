@@ -3,7 +3,7 @@ import QtQuick 1.0
 Item {
     id: dlgAbout
     anchors.fill: parent
-    z: 50
+    z: 100
     FontLoader { id: aboutFont; source: ":/fonts/forgotte.ttf" }
     Rectangle {
         anchors.fill: dlgAbout
@@ -17,14 +17,16 @@ Item {
         text: "About"
         color: "white"
         font.bold: true
-        font.pointSize: 36*gameBoard.cellSize/40
+        //font.pointSize: 36*gameBoard.cellSize/40
+        font.pointSize: 12
         font.family: aboutFont.name
     }
 
     Text {
         anchors { horizontalCenter: dlgAbout.horizontalCenter; margins: 5*gameBoard.cellSize/40; top: dlgTitle.bottom }
         width: dlgAbout.width - 2*anchors.margins
-        font.pointSize: 16*gameBoard.cellSize/40
+        //font.pointSize: 16*gameBoard.cellSize/40
+        font.pointSize: 6
         font.family: aboutFont.name
         color: "white"
         wrapMode: Text.WordWrap

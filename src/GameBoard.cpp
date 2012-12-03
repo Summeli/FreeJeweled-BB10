@@ -11,7 +11,7 @@
 
 const int SMALL_CELL_SIZE = 40;
 const int BIG_CELL_SIZE = 80;
-const int BB10_CELL_SIZE = 85;
+const int BB10_CELL_SIZE = 95;
 const int DEFAULT_ROW_COUNT = 8;
 const int DEFAULT_COLUMN_COUNT = 8;
 
