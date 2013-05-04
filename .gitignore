@@ -1,13 +1,11 @@
 *.o
 *.a
 *.bar
-*.cproject
 .preview*
 .moc
 .obj
 .settings
 .rcc
-FreeJeweled
 arm/Makefile
 arm/Makefile.Debug
 arm/Makefile.Release
