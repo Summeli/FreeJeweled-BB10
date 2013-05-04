@@ -2,7 +2,6 @@
 *.a
 *.bar
 *.cproject
-*.project
 .preview*
 .moc
 .obj
